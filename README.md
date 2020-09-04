@@ -1,2 +1,2 @@
 # ajab-javascriptprojects
- axiom mernstack program
+ 20 projects devoloped by HTML, CSS & JS.

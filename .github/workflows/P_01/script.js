@@ -39,7 +39,7 @@ function checkEmail(input){
 
 function checkPasswordMatch(input1, input2){
     if (input1.value !== input2.value){
-        showError(input2, "Password do not match")
+        showError(input2, "Password don't match")
     }
 }
 // function to check the required field

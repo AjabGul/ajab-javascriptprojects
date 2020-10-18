@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(107, 100, 80);
+    display: flex;
+    flex-direction: column;
+    color: whitesmoke;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    
+}
+
+.movie_cantainer select{
+    background-color: white;
+    border: 0;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-left: 10px;
+    padding: 5px 15px 5px 15px;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+.seat {
+    background-color: rgb(221, 226, 201);
+    height: 14px;
+    width: 15px;
+    margin: 3px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+/* show the sets in row apply display flex */
+.row {
+    display: flex;
+}
+
+.seat.selected {
+    background-color: yellow;
+}
+
+.seat.occupied{
+    background-color: green;
+}
+
+/* The :nth-of-type(n) selector matches every element that is the nth child, of a particular type, of its parent.
+n can be a number, a keyword, or a formula. */
+
+.seat:nth-of-type(2){
+    margin-right: 20px;
+}
+
+.seat:nth-last-of-type(2){
+    margin-left: 20px;
+}
+
+/* The :not(selector) selector matches every element that is NOT the specified element/selector. */
+
+/* The :hover selector is used to select elements when you mouse over them.
+Tip: The :hover selector can be used on all elements, not only on links.
+Tip: Use the :link selector to style links to unvisited pages, the :visited selector to style links to visited pages, and the :active selector to style the active link.
+Note: :hover MUST come after :link and :visited (if they are present) in the CSS definition, in order to be effective! */
+
+.seat:not(.occupied):hover{
+    cursor: pointer;
+    transform: scale(1.2);
+
+}
+
+.legend{
+    background-color: rgb(107, 61, 61);
+    padding: 5px 5px;
+    border-radius: 5px;
+    /* list-style-type: is used manipulate the bullets;*/
+    list-style-type: none;
+    display:flex;
+    justify-content:space-between;
+}
+
+.legend .seat:not(.occupied):hover{
+    cursor: default;
+    transform: scale(1);
+}
+
+.legend li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+}
+
+.legend li small {
+    margin-left: 3px;
+}
+
+.screen{
+    height: 70px;
+    width: 100%;
+    background-color: whitesmoke;
+    margin: 15px 0;
+    transform: rotateX(-45deg);
+    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+}
+
+.cantainer{
+    perspective: 400px;
+    margin-bottom: 30px;
+}
+
+p.text {
+    margin: 10px 0;
+}
+
+p.text span {
+    color: yellow;
+}

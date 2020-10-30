@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+/* imported from font.google.com */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Questrial', sans-serif;
+    display: flex;
+    flex-direction: column; /*disply flex = disply in row therfor direction = column*/
+    align-items: center;
+    justify-content: center;
+    max-height: 100vh;
+    margin: 0px;
+    background-color: gray;
+}
+
+h2 {
+    color: white;
+}
+
+.screen {
+    cursor: pointer;
+    width: 60%;
+    background-color: black !important;
+}
+
+.controls {
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    padding: 15px;
+}
+
+.btn {
+    border: 0;
+    background-color: transparent;
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+.btn:focus{
+    outline: 0;
+}
+
+.fa-play{
+    color: green;
+}
+
+.fa-stop{
+    color: red;
+}
+
+.fa-pause {
+    color: white;
+}
+
+span.timestamp{
+    color: white;
+    font-weight: bold;
+    margin-left: 10px;
+}
+/* A function--> used to remain the screen bigger in high px video,
+ when you minmize the player in browser which is less than 800px */
+@media(max-width: 800px){
+    .screen .controls {
+        width: 90%;
+    }
+}

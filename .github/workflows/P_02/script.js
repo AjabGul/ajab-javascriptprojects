@@ -9,16 +9,16 @@ let ticketPrice = +movieSelect.value;
 // step 7: Function for data from local storage to build UI
 
 function populateUI (){
-    const selectedSeats = JSON.parse(localStorage.setItem(SelectedSeat));
+    const selectedSeats = JSON.parse(localStorage.getItem('SelectedSeat'));
     if (selectedSeats !== null && selectedSeats.length > 0){
         seats.forEach((seat, index) => {
             if (selectedSeats.indexOf(index)> -1){
                 seat.classList.add("selected");
             }
-        })
+        });
     }
 
-    const selectedMovieIndex = localStorage.setItem("selectedMovieIndex");
+    const selectedMovieIndex = localStorage.getItem("selectedMovieIndex");
     if (selectedMovieIndex !== null){
         movieSelect.selectedIndex = selectedMovieIndex;
     }
@@ -66,3 +66,5 @@ cantainer.addEventListener("click", (e) => {
     }
 }) 
 
+// calculate intial number of seats and total price
+updateSelectedCount();

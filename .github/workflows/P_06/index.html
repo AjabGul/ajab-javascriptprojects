@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <title>My Landing Page</title>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="images/logo.png" >
+        </div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Lab</a></li>
+            <li><a href="#">Research Interest</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <button id="toggle" class="toggle">
+            <i class="fa fa-bars fa-2x"></i>
+        </button>
+        <h1>Human Molecular Genetics</h1>
+        <p>Welcome to the Human Molecular Genetics Research Lab.</p>
+        <button class="apply" id="open">Apply Now</button>
+    </header>
+
+    <div class="container">
+        <h2>Topic of Interest</h2>
+        <p>
+            Achievements of contemporary molecular biology indicate that genetically determined events play a significant role in the development of many widespread diseases that are not traditionally considered as genetic ones. Single point mutations in the nucleotide sequence of a DNA molecule or single nucleotide polymorphisms (SNPs) can act as such factors. A certain combination of genetically determined changes specifies the level of risk for disease development. The information on these combinations, obtained through genetic analysis, will be able to predict the susceptibility of an individual to future diseases.
+            In addition to hereditary factors, among which are the above mentioned genetic polymorphisms, genetic defects and breakages at the somatic level are another cause for the development of many diseases, especially cancer. A spectrum of somatic mutations is a mandatory attribute of malignant enoplasms. Aberrant DNA hypermethylation, which is observed in tumor tissue, is also related to these changes.
+        </p>
+
+        <h2>Lines Of Research</h2>
+        <p>
+            The main lines of research currently going on in the laboratory are performed using the model of colorectal cancer, one of the most significant cancers. Colorectal cancer is among the leading causes of cancer-related deaths. The laboratory is striving to identify which of inherited, somatic, and epigenetic markers of colorectal cancer are most informative. In the framework of this project, our research encompasses, on the one hand, an investigation aimed at identifying the combination of genetic markers of individual susceptibility to the disease, and, on the other hand, an analysis of specific profiles of genetic and epigenetic (namely DNA methylation) changes in tumor tissue to select those that are most informative and, hence, can be used to design diagnostic tests.
+        </p>
+
+        <h2> Facilities</h2>
+        <ul>
+            <li>Low temperature and domestic refrigerators</li>
+            <li> Desktop centrifuge with cooling and without</li>
+            <li>Boxes for setting the amplification reactions</li>
+            <li>Thermocycler DNA ENGINE TETRADTM (MJ Research)</li>
+            <li>MALDI ToF mass spectrometer MICROFLEX (Bruker Daltoniks)</li>
+            <li>Sequencer ABI Prism-3730 Genetic Analyzer (Applied Biosystems, USA; Hita-chi, Japan)</li>
+            <li> SOLiD 4 (Applied Biosystems, USA)</li>
+            <li> GS FLX+ Sequensing System (Roche)</li>
+        </ul>
+
+        
+    </div>
+
+    <div class="modal-container" id="modal">
+        <div class="modal">
+            <button class="close-btn" id="close">
+                <i class="fa fa-times"></i>
+            </button>
+            <div class="modal-header">
+                <h3>Apply</h3>
+            </div>
+            <div class="modal-content">
+                <p>To sign up for joining the lab please submit this form.</p>
+                <form class="modal-form">
+                    <div>
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" placeholder="Full Name" class="form-input">
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="text" id="email" placeholder="Email" class="form-input">
+                    </div>
+                    <div>
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Password" class="form-input">
+                    </div>
+                    <div>
+                        <label for="password2">Confirm Password</label>
+                        <input type="password" id="password2" placeholder="Confirm Password" class="form-input">
+                    </div>
+                    <input type="submit" value="Submit" class="submit-btn">
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

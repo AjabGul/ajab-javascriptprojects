@@ -3,17 +3,18 @@ const open = document.getElementById('open');
 const close = document.getElementById('close');
 const modal = document.getElementById('modal');
 
-// Add Event Listeners
+// Event Listeners
+// 1. show the navigation bar upon clicking on toggle bar
 toggle.addEventListener('click', () => 
     document.body.classList.toggle('show-nav')
 );
 
-// 2. Show the Modal
+// 2. show form upon clicking the apply button
 open.addEventListener('click', () =>
     modal.classList.add('show-modal')
 );
 
-// 3. Close the Modal
+// 3. Close the form by clicking close button
 close.addEventListener('click', () => 
     modal.classList.remove('show-modal')
 );

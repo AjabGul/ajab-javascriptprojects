@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Hangman Game</title>
+</head>
+<body>
+    <h1>Hangman Game</h1>
+    <p>Can you gess the hidden word, please inter a letter</p>
+    <div class="game-container">
+        <svg height="250px" width='300px' class="figure-container">
+            <!--platform -->
+            <line x1="60" y1="20" x2="140" y2="20" />
+            <line x1="140" y1="20" x2="140" y2="50" />
+            <line x1="60" y1="20" x2="60" y2="230" />
+            <line x1="20" y1="230" x2="100" y2="230" />  
+            <!-- head  -->
+            <circle cx ="140" cy="70" r="20" class="hangman-part"/>
+            <!-- body  -->
+            <line x1="140" y1="90" x2="140" y2="150" class="hangman-part"/>
+            <line x1="140" y1="90" x2="140" y2="150" class="hangman-part"/>
+            <!-- arms  -->
+            <line x1="140" y1="100" x2="160" y2="130" class="hangman-part"/>
+            <line x1="140" y1="100" x2="120" y2="130" class="hangman-part"/>
+            <!-- feet  -->
+            <line x1="140" y1="150" x2="160" y2="180" class="hangman-part"/>
+            <line x1="140" y1="150" x2="120" y2="180" class="hangman-part"/>
+        
+        </svg>
+    
+        <div class="wrong-letters" id="wrong-letters">
+            <p>Wrong Guesses</p>
+            <!-- <span>x, y, z</span> --> <!--this span will be added by JS-->
+        </div>
+    
+        <div class="word" id="word"> 
+            <!--word container letters will be added by js randomly-->
+            <!--<div class="letter">h</div> 
+            <div class="letter">e</div>
+            <div class="letter">l</div>
+            <div class="letter">l</div>
+            <div class="letter">o</div> -->
+        </div>
+    
+    </div>
+    
+    <div class="popup-container" id="popup-container">
+        <div class="popup">
+            <h2 id="win-lose">
+                <!-- You won! This will be add by js--> 
+            </h2>
+            <button id="restart">
+                Restart Game
+            </button>
+        </div>
+    </div>
+
+    <div class="slider-container" id="slider-container">
+        <p>You have already enter this letter.</p>
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

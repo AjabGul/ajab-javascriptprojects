@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: lightsteelblue;
+    display: flex;
+    flex-direction: column;
+}
+
+.header{
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    background-color: black;
+    color: white;
+    padding: 15px 15px;
+    text-align: center;
+}
+
+nav{
+    background-color: black;
+    color: white;
+    position: fixed;
+    top: 15%;
+    left: 0;
+    width: 200px;
+    height: 100vh;
+    /* z-index: 100; */
+    
+}
+
+.cantainer ol li{
+    color: goldenrod;
+    margin-bottom: 25px; 
+    
+}
+.cantainer ol li a{
+    color: white;
+}
+
+.cantainer ol li a:link{
+    text-decoration: none;
+    color: white;
+}
+
+.intro{
+    text-align: center;
+    color:black;
+    padding: 15px;
+    position: fixed;
+    top: 20%;
+    right: 20%;
+    max-width: 100%;
+    width: 800px;
+}

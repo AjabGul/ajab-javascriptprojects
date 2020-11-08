@@ -1,0 +1,137 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: steelblue;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h1{
+    margin: 20px 0 0;
+}
+
+.game-container{
+    padding: 20px 30px;
+    position: relative;
+    margin: auto;
+    width: 450px;
+    height: 350px;
+    
+
+}
+
+.figure-container{
+    
+    stroke: white;
+    stroke-width: 4px;
+    stroke-linecap: round;
+    
+    
+}
+
+.hangman-part{
+    display: none;
+}
+
+.wrong-letters{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+.wrong-letters span{
+    font-size: 24px;
+}
+
+
+.word{
+    display: flex;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.letter{
+    border-bottom: 3px solid skyblue;
+    display: inline-flex;
+    font-size: 36px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 3px;
+    height: 50px;
+    width: 20px;
+}
+
+.popup-container{
+
+    background-color: rgba(0,0,0,0.3);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.popup{
+
+    background-color: skyblue;
+    text-align: center;
+    border-radius: 5px;
+    padding: 20px;   
+}
+
+.popup h2{
+    color: black;
+}
+
+.popup button{
+    cursor: pointer;
+    background-color: white;
+    border: 0;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.popup button:focus{
+    outline: 0;
+}
+
+.popup button:active{
+    transform: scale(0.95);
+}
+
+.slider-container{
+    background-color: rgba(0,0,0,0.3);
+    position: absolute;
+    bottom: -50px;
+    border-radius: 10px 10px 0 0;
+    padding: 15px 20px;
+    transition: transform 0.5s ease-in-out;
+
+}
+
+.slider-container p{
+    margin: 0;
+}
+
+.slider-container.show{ /* This show div will be manipulate by JS */
+    transform: translateY(-50px);
+}
+
+
+

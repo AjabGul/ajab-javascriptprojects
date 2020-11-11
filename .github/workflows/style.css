@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+
 body{
     background-color: lightsteelblue;
     display: flex;
@@ -29,7 +30,7 @@ nav{
     left: 0;
     width: 200px;
     height: 100vh;
-    /* z-index: 100; */
+    z-index: 100;
     
 }
 
@@ -53,7 +54,18 @@ nav{
     padding: 15px;
     position: fixed;
     top: 20%;
-    right: 20%;
+    right:0;
     max-width: 100%;
     width: 800px;
 }
+
+@media (max-width: 800px) {
+
+    .intro{
+        width: 300px;
+    }    
+}
+
+
+
+

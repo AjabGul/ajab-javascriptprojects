@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Expense Tracker</title>
+</head>
+<body>
+    <h2>Expense Tracker</h2>
+    <div class="container">
+        <!-- balance  -->
+        <h4>Balance</h4>
+        <h1 id="balance">0.00 PKR</h1>
+
+        <!-- income and balance summmary  -->
+        <div class="income-expence-container">
+            <div>
+                <h4>Incom</h4>
+                <p class="money-plus" id="money-plus">+0.00</p>
+            </div>
+            <div>
+                <h4>Expense</h4>
+                <p class="money-minus" id="money-minus">-0.00</p>
+            </div>
+        </div>
+
+        <!-- Transaction History  -->
+        <h3>Transaction History</h3>
+        <ul class="list" id="list">
+            <li class="plus">
+                Salary
+                <span>60,000 PKR</span>
+                <button class="delete-btn">X</button>
+            </li>
+            <li class="minus">
+                Electric Bill
+                <span>10,000 PKR</span>
+                <button class="delete-btn">X</button>
+            </li>
+        </ul>
+
+        <!-- form to add new Transaction  -->
+
+        <form id="id">
+            <div class="form-control">
+                <label for="description">Description</label>
+                <input type="text" id="descripttion" placeholder="Description of Transaction">
+            </div>
+            <div class="form-control">
+                <label for="amount">Transaction Amount <br />
+                For income, enter positive value and for expense, enter negative value.
+                </label>
+                <input type="number"  id="amount" placeholder="Transaction Amount">
+            </div>
+            <button class="btn">Add Transaction</button>
+
+        </form>
+    </div>
+
+
+    
+    <script src="script.js"></script>
+</body>
+</html>

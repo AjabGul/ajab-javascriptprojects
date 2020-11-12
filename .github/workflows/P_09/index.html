@@ -14,21 +14,21 @@
         <h1 id="balance">0.00 PKR</h1>
 
         <!-- income and balance summmary  -->
-        <div class="income-expence-container">
+        <div class="income-expense-container">
             <div>
                 <h4>Incom</h4>
-                <p class="money-plus" id="money-plus">+0.00</p>
+                <p class="money plus" id="money-plus">+0.00</p>
             </div>
             <div>
                 <h4>Expense</h4>
-                <p class="money-minus" id="money-minus">-0.00</p>
+                <p class="money minus" id="money-minus">-0.00</p>
             </div>
         </div>
 
-        <!-- Transaction History  -->
+        <!-- Transaction History  DOM element li will be add by JS--> 
         <h3>Transaction History</h3>
         <ul class="list" id="list">
-            <li class="plus">
+            <!-- <li class="plus">
                 Salary
                 <span>60,000 PKR</span>
                 <button class="delete-btn">X</button>
@@ -37,15 +37,15 @@
                 Electric Bill
                 <span>10,000 PKR</span>
                 <button class="delete-btn">X</button>
-            </li>
+            </li> -->
         </ul>
 
         <!-- form to add new Transaction  -->
 
-        <form id="id">
+        <form id="form">
             <div class="form-control">
                 <label for="description">Description</label>
-                <input type="text" id="descripttion" placeholder="Description of Transaction">
+                <input type="text" id="description" placeholder="Description of Transaction">
             </div>
             <div class="form-control">
                 <label for="amount">Transaction Amount <br />

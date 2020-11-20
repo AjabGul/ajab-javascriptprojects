@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Infinite Scroll</title>
+</head>
+<body>
+
+    <h1>Blog with Infinite Scroll</h1>
+    <!-- input field to filter fetched posts  -->
+    <div class="filter-container">
+        <input type="text" class="filter" id="filter" placeholder="Enter keyword for filter">
+    </div>
+
+    <!-- post-container contains all posts fetched for api  -->
+
+    <div id ="post-container">
+        <div class="post">
+            <div class="number">1</div>
+            <div class="post-info">
+                <h2 class="post-title"> First Post </h2>
+                <p class="post-body">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae dolore at ab, rem tempore, repellat ipsam obcaecati temporibus nulla velit odio et omnis voluptatibus reprehenderit possimus vitae aut necessitatibus nobis!
+                </p>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="loader" id="loader">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

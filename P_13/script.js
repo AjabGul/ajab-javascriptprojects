@@ -24,18 +24,8 @@ let currentActiveCard = 0;
 const cardElements = [];
 
 // array caontains objects for collection of cards question and Answer data
-const cardsData = [
-    {
-        question: 'What is HTML?',
-        answer: 'HTML stand for Hypertext Markup Language'
-    },
-
-    {
-        question: 'What is CSS?',
-        answer: 'CSS stand for Cascading Style Sheet'
-    },
-
-]
+// step 9: function to get cards data 
+const cardsData = getCardsData();
 
 //  functions 
 // step 2: function to create all cards
@@ -83,6 +73,14 @@ function updatecurrentCardText(){
     currentCard.innerHTML = ` <p>${currentActiveCard +1}/ ${cardElements.length} </p>`;
 }
 
+// 9.1: get cards data from local storage 
+
+function getCardsData(){
+    const cards = JSON.parse(localStorage.getItem('cards'));
+    return cards === null ? [] : cards;
+}
+
+
 
 // EventListener
 // step 7:  eventlistener for next button
@@ -101,9 +99,8 @@ nextBtn.addEventListener('click', ()=> {
     updatecurrentCardText();
 } )
 
-// step 8: eventlistener for the prev button
 
-// step 7:  eventlistener for next button
+// step 8:  eventlistener for prev button
 prevBtn.addEventListener('click', ()=> {
     //  hide the current card and move to right
     cardElements[currentActiveCard].className = 'card right';
@@ -118,3 +115,7 @@ prevBtn.addEventListener('click', ()=> {
     // update the current card number
     updatecurrentCardText();
 } )
+
+// step 9.2 event listener for the add new card button
+
+addCardBtn.addEventListener('click', )

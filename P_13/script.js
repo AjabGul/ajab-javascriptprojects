@@ -27,7 +27,9 @@ const cardElements = [];
 // step 9: function to get cards data 
 const cardsData = getCardsData();
 
-//  functions 
+
+
+//  Functions 
 // step 2: function to create all cards
 function createCards(){
     cardsData.forEach((data, index)=> createCard(data, index))
@@ -63,7 +65,7 @@ function createCard(data, index){
 
     // step 5: display the current <- card / total-> card value
     updatecurrentCardText();
-}
+} 
 
 createCards();
 
@@ -77,12 +79,24 @@ function updatecurrentCardText(){
 
 function getCardsData(){
     const cards = JSON.parse(localStorage.getItem('cards'));
-    return cards === null ? [] : cards;
+    return cards === null ? [] : cards; // ternary operatot ? : ;
 }
 
+// step 11.1: Function to get card data from local storage
+function saveCardData(cards){
+    // save cards to local storage
+    localStorage.setItem('cards', JSON.stringify(cards));
+    // reload windo
+    window.location.reload();
+};
 
 
-// EventListener
+
+
+
+
+
+// EventListeners
 // step 7:  eventlistener for next button
 nextBtn.addEventListener('click', ()=> {
     //  hide the current card and move to left
@@ -118,4 +132,50 @@ prevBtn.addEventListener('click', ()=> {
 
 // step 9.2 event listener for the add new card button
 
-addCardBtn.addEventListener('click', )
+addCardBtn.addEventListener('click', ()=>{
+    addCardContainer.classList.add('show')
+});
+
+// step 10: event listener for close add new card button 
+
+closeCardBtn.addEventListener('click', ()=>{
+    addCardContainer.classList.remove('show')
+});
+
+// step 11: add addNewCardBtn Event listener 
+addNewCardBtn.addEventListener('click', ()=>{
+    // get user input from question & answer input field 
+    const questionInput = question.value;
+    const answerInput = answer.value;
+    // confirm inuputs are not null
+    if (questionInput.trim() && answerInput.trim()){
+        // create new objects using user inputs
+        const newCard = {
+            question: questionInput, answer: answerInput
+        }
+        // newCard object used to create a new card using createCard function
+        createCard(newCard);
+        // reset form input fields 
+        question.value = '';
+        answer.value = '';
+        //  hide form upon submite
+        addCardContainer.classList.remove('show');
+
+        // add the new card object to the cardsData
+        cardsData.push(newCard);
+        // save data to local storage and reload 
+        saveCardData(cardsData);
+    }
+});
+
+// step 12: eventlistener to clear all cards 
+clearBtn.addEventListener('click', ()=>{
+    // cleat data form local storage
+    localStorage.clear();
+    // clear all content of cardContainer
+    cardContainer.innerHTML = '';
+    // Reload the current card window 
+    window.location.reload();
+    // update the current card number
+    currentCard.innerHTML = `<p> </p>`;
+})

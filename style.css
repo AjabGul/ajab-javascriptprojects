@@ -1,71 +1,144 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 *{
     box-sizing: border-box;
 }
 
-
 body{
-    background-color: lightsteelblue;
-    display: flex;
-    flex-direction: column;
+    background-color: rgb(231, 221, 221);
 }
 
-.header{
-    position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
-    background-color: black;
-    color: white;
-    padding: 15px 15px;
-    text-align: center;
-}
 
-nav{
-    background-color: black;
-    color: white;
-    position: fixed;
-    top: 15%;
-    left: 0;
-    width: 200px;
-    height: 100vh;
-    z-index: 100;
+.navBar {
+    background-color: rgb(87, 40, 40);
+    border-radius: 10px;
     
 }
 
-.cantainer ol li{
-    color: goldenrod;
-    margin-bottom: 25px; 
-    
-}
-.cantainer ol li a{
-    color: white;
+.navBar ul{
+    overflow: auto;
 }
 
-.cantainer ol li a:link{
+.navBar li{
+    float: right;
+    list-style: none;
+    margin: 13px 20px;;
+}
+
+.name img{
+    position: absolute;
+    left: 15px;
+    top: 20px;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px; 
+} 
+
+.name img:hover{
+    height: 100px;
+    width: 100px;
+} 
+
+.name p{
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    margin-left: 20px;
+    
+}
+
+
+
+.navBar li button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    padding: 3px 3px;
     text-decoration: none;
-    color: white;
+    cursor: pointer;
+}
+
+.navBar li button:active{
+    transform: scale(.95);
+}
+
+.navBar li button:focus{
+    outline: none;
 }
 
 .intro{
+    border: 2px solid  rgb(87, 40, 40);
+    border-radius: 5px;
+    background-color: rgb(211, 191, 211);
+    padding: 50px 50px;
+    margin:10px auto;
+    width: 100%;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.intro h3{
     text-align: center;
-    color:black;
-    padding: 15px;
-    position: fixed;
-    top: 20%;
-    right:0;
-    max-width: 100%;
-    width: 800px;
 }
 
-@media (max-width: 800px) {
-
-    .intro{
-        width: 300px;
-    }    
+main{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    border: 2px solid  rgb(87, 40, 40);
+    border-radius: 5px;
 }
 
+.box{
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0,0, 0.2);
+    transition: box-shadow 0.2s ease-out;
+    max-height: auto;
+}
+
+.box:active{
+    box-shadow: 0 0 10px 5px #e67e22;
+}
+
+.box img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.box .imageInfo{
+    background-color: #e67e22;
+    color: white;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    height: 100%;
+
+}
+
+@media (max-width: 1100px){
+    main{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 800px){
+    main{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px){
+    main{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
 
 
 

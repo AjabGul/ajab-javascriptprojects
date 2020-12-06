@@ -65,3 +65,48 @@ form button{
     padding:13px 30px;
     border-radius: 50px;
 }
+
+.container {
+    margin: 30px auto;
+    max-width: 100%;
+    width: 500px;
+}
+
+.container h2 {
+    text-align: center;
+}
+
+.container p {
+    text-align: left;
+    margin: auto auto;
+    padding: 30px;
+}
+
+ul.songs {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul.songs li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.btn {
+    background-color: #756e97;
+    border: 0;
+    border-radius: 20px;
+    color: #f5f6fa;
+    padding: 5px 10px;
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+}
+
+.centered button {
+    margin: 15px;
+}

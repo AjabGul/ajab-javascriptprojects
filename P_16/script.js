@@ -3,8 +3,9 @@ const text = document.getElementById('text')
 
 // step 1:
 const totalTime = 7500
-const breatheTime =(totalTime/ 5) * 2
-const holdTime = totalTime / 5
+const breatheIn = 3000
+const holdTime = 1500
+const breatheOut = 3000
 
 // step 3: 
 breatheAnimation();
@@ -21,8 +22,10 @@ function breatheAnimation(){
             text.innerText = 'Breathe Out'
             container.className = 'container shrink'
         }, holdTime)
-    }, breatheTime)
+    }, breatheIn)
 }
+
+
 
 // step 4: 
 setInterval(breatheAnimation, totalTime)

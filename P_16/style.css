@@ -5,6 +5,14 @@
 }
 
 body{
+    background-image: url('./img/img.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+
+    background-color: #6c8f88;
     background-color: #6c8f88;
     color: #fff;
     font-family: 'Lato', sans-serif;
@@ -14,4 +22,103 @@ body{
     flex-direction: column;
     align-items: center;
     margin: 0;
+}
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 300px;
+    width: 300px;
+    margin: auto;
+    transform: scale(1);
+
+}
+
+
+.container.grow{
+    animation: grow 3s linear forwards;
+}
+
+.container.shrink{
+    animation: shrink 3s linear forwards;
+}
+
+.gradient-circle{
+    background: conic-gradient(
+        rgb(116, 155, 116) 0%,
+        rgb(116, 155, 116) 40%,
+        rgb(214, 207, 207) 40%,
+        rgb(214, 207, 207) 60%,
+        rgb(88, 85, 100) 60%,
+        rgb(88, 85, 100) 100%
+    );
+    height: 320px;
+    width: 320px;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    z-index: -2;
+    border-radius: 50%;
+}
+
+.circle{
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index:-1;
+    border-radius: 50%;
+    
+}
+
+.pointer{
+    background-color: white;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    display: block;
+}
+
+.pointer-container{
+    position: absolute;
+    top: -40px;
+    left: 140px;
+    width: 20px;
+    height: 190px;
+    animation: rotate 7.5s linear forwards infinite;
+    transform-origin: bottom center;
+
+}
+
+@keyframes rotate {
+    form{
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes grow {
+    form{
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes shrink {
+    form{
+        transform: scale(1.2);
+    }
+    to {
+        transform: scale(1);
+    }
 }

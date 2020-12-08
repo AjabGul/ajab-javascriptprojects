@@ -4,13 +4,21 @@
 
 body{
     background-color: rgb(231, 221, 221);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
 
 .navBar {
     background-color: rgb(87, 40, 40);
     border-radius: 10px;
-    
+    position: fixed;;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 .navBar ul{
@@ -75,14 +83,20 @@ body{
     border-radius: 5px;
     background-color: rgb(211, 191, 211);
     padding: 50px 50px;
-    margin:10px auto;
     width: 100%;
-    text-align: justify;
-    margin-bottom: 20px;
+    height: 100vh;
+    
+    
 }
 
 .intro h3{
     text-align: center;
+}
+
+.intro p{
+    align-items: center;
+    justify-content: center;
+    margin-top: 20%;
 }
 
 main{

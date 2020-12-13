@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+:root {
+    --box-shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.2);
+    --right: rgb(55, 226, 55);
+    --wrong: red;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    background-color: rgb(240, 205, 240);
+}
+
+ul{
+    max-width: 350px;
+    width: 100%;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+ul li{
+    width: 100%;
+    background-color: thistle;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+    margin:5px 0;
+    padding: 10px 25px;
+    font-weight:bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+ul li.right {
+    color: var(--right);
+    box-shadow: var(--box-shadow);
+}
+
+ul li.wrong {
+    color: var(--wrong);
+    box-shadow: var(--box-shadow);
+}
+
+ul li:hover{
+    background-color:gray;
+}
+
+ul li .fas{
+    font-size: 25px;
+    cursor: pointer;
+}
+
+ul li .fas:hover{
+    transform: scale(0.95);
+}
+
+
+ul li span{
+    background-color: rgb(119, 84, 117);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.btn{
+    background-color: rgb(119, 84, 117);
+    padding: 15px 10px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn:active{
+    transform: scale(.95);
+    outline: none;
+}
+
+.btn:hover{
+    background-color: tomato;
+}

@@ -74,6 +74,14 @@ ul li span{
     border-radius: 5px;
 }
 
+.sortlist li.hint{
+    background-color: rgb(216, 216, 32);
+}
+
+.sortlist li.active{
+    background-color: pink;
+}
+
 .btn{
     background-color: rgb(119, 84, 117);
     padding: 15px 10px;

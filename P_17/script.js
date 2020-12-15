@@ -45,10 +45,7 @@ countryList.forEach(addToListTtem);
 function addToListTtem(country, index) {
 
     dragbox.innerHTML += `
-
     <li draggable="true" id="listLi"> <span>${index + 1}</span> ${country} <br/> <i class="fas fa-grip-lines"></i></li>
-
-
   `;
 
 }
@@ -129,11 +126,8 @@ window.addEventListener('load', function(){
     
 
 
-
-
-// // EventListener
-// checkBtn.addEventListener('click', ()=>{
-//     var displaytext = listIndex.option.value;
-//     country.value =displaytext;
-//     console.log(displaytext);
-// });
+// EventListener
+checkBtn.addEventListener('click', ()=>{
+    var displaytext = console.log(sortedCountryList);
+    console.log(displaytext);
+});

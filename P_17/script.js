@@ -144,6 +144,6 @@ window.addEventListener('load', function() {
 
 
 checkBtn.addEventListener('click', () => {
-    const displaytext = sortedCountryList
-    console.log(displaytext);
+    const orderedList = sortedCountryList
+    console.log(orderedList);
 });

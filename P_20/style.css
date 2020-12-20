@@ -1,0 +1,160 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    /* height: 100%; */
+    /* width: 100%; */
+}
+
+.mainContainer{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url("background-img.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 60px;
+    margin: 0 auto;
+    background-color: #8f5e68;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.logo img{
+    width: 50px;
+    background-color:#8f5e68;
+}
+.logo p {
+    font-weight: bold;
+    color: white;
+    padding-left: 10px;
+}
+
+.togglebtn{
+    position: absolute;
+    top: 1.5rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+
+}
+
+.togglebtn .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 5px;
+    
+}
+
+
+.navbar-links ul{
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.navbar-links li{
+    list-style: none;
+}
+nav ul li:last-child{
+    padding-right: 20px;
+}
+.navbar-links li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    display: block;
+}
+
+.container{
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.care{
+    margin-top: 40px;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 40px 40px;
+    text-align: justify;
+    font-size: 24pxpx;
+}
+
+.prevention{
+    text-align: justify;
+    
+}
+
+
+
+@media (max-width:950px){
+    .container{
+        font-size: 12px;
+    }
+}
+
+@media (max-width:700px){
+    .container{
+        font-size: 10px;
+    }
+}
+
+@media (max-width:600px){
+    .container{
+        font-size: 8px;
+    }
+    .togglebtn{
+        display: flex;
+    }
+
+    .navbar-links{
+        display: none;
+        width: 100%;
+    }
+
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links ul{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-links li{
+        text-align: center;
+    }
+
+    .navbar-links li a{
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active{
+        display: flex;
+
+    }
+}

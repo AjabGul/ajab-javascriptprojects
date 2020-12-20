@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div class="mainContainer">
+    <nav class="navbar">
+      <div class="logo">
+        <img src="logo.png" alt="" />
+        <p>COVID-19 Pandemic<br />Updates of Pakistan</p>
+      </div>
+      <a href="#" class="togglebtn" id="togglebtn">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </a>
+      <div class="navbar-links" id="navbar-links">
+        <ul>
+          <li><a href="../index.html">HOME</a></li>
+          <li><a href="#care">PRECAUTIONS</a></li>
+          <li><a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019">ABOUT</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="pak" id="pak"></div>
+      <div class="total_cases" id="total_cases"></div>
+      <div class="total_recovred" id="total_recovred"></div>
+      <div class="total_deaths" id="total_deaths"></div>
+      <div class="active_cases" id="active_cases"></div>
+      <div class="new_cases" id="new_cases"></div>
+      <div class="new_deaths" id="new_deaths"></div>
+      <div class="last_update" id="last_update"></div>
+    </div>
+
+    <canvas id="lineChart" class="lineChart" width="600px" height="200px"></canvas>
+    <!-- <canvas id="barChart" width="700px" height="450px"></canvas> -->
+
+    <div class="care" id="care">
+      <div> Protect yourself and others around you by knowing the facts and taking appropriate precautions. Follow
+        advice
+        provided by your local health authority.</div>
+
+      <br>
+      <div class="prevention">
+        To prevent the spread of COVID-19: <br> <br>
+        1- Clean your hands often. Use soap and water, or an alcohol-based hand rub. <br>
+        2- Maintain a safe distance from anyone who is coughing or sneezing. <br>
+        3- Wear a mask when physical distancing is not possible. <br>
+        4- Don’t touch your eyes, nose or mouth. <br>
+        5- Cover your nose and mouth with your bent elbow or a tissue when you cough or sneeze. <br>
+        6- Stay home if you feel unwell. <br>
+        7- you have a fever, cough and difficulty breathing, seek medical attention.
+      </div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <!-- <script src="script1.js"></script> -->
+</body>
+
+</html>

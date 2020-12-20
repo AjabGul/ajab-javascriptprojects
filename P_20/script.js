@@ -1,5 +1,4 @@
-//  step 1: fetch data from Rapid API
-// https://rapidapi.com/slotixsro-slotixsro-default/api/covid-19-tracking?endpoint=apiendpoint_7d5ee8f3-b6ad-49db-a824-baaad42d87c0
+//  step 1: fetch API
 
 fetch("https://covid-19-tracking.p.rapidapi.com/v1/Pakistan", {
 	"method": "GET",
@@ -51,6 +50,7 @@ fetch("https://covid-19-tracking.p.rapidapi.com/v1/Pakistan", {
 		document.getElementById('new_deaths').innerHTML = `New Death:<br/> ${newDeaths}`;
 		document.getElementById('last_update').innerHTML = `Last Update: <br/>${lastUpdate}`;
 
+		// lets go for a line graph
 
 		const ctx = document.getElementById('lineChart').getContext('2d');
 		const myChart = new Chart(ctx, {

@@ -1,0 +1,69 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    background-image: url(ny1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 5s;
+
+    animation-name: animate;
+    animation-duration: 38s;
+    animation-direction: alternate-reverse;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-timing-function: ease-in-out;
+}
+
+.mainContainer{
+    color: white;
+    text-align: center;
+    padding-top: 10%;
+
+}
+
+h1{
+    font-size: 60px;
+}
+
+.newYear{
+    font-size: 70px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 50px;
+    font-size: 25px;
+
+}
+
+@keyframes animate{
+    0%{
+        background-image: url(ny2.jpg);
+    }10%{
+        background-image: url(ny3.jpg);
+    }20%{
+        background-image: url(ny4.jpeg);
+    }30%{
+        background-image: url(ny5.jpg);
+    }40%{
+        background-image: url(ny6.jpeg);  
+    }50%{
+        background-image: url(ny7.jpg);
+    }60%{
+        background-image: url(ny8.jpg);
+    }80%{
+        background-image: url(ny1.jpg);
+    }100%{
+        background-image: url(ny2.jpg);
+    }
+}

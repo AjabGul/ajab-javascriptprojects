@@ -5,7 +5,7 @@
 body{
     height: 100vh;
     width: 100%;
-    background-image: url(ny1.jpg);
+    background-image: url("ny1.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -43,27 +43,28 @@ h1{
     justify-content: space-evenly;
     padding-top: 50px;
     font-size: 25px;
+    font-weight: bold;
 
 }
 
 @keyframes animate{
     0%{
-        background-image: url(ny2.jpg);
+        background-image: url("ny2.jpg");
     }10%{
-        background-image: url(ny3.jpg);
+        background-image: url("ny1.jpg");
     }20%{
-        background-image: url(ny4.jpeg);
+        background-image: url("ny4.jpeg");
     }30%{
-        background-image: url(ny5.jpg);
+        background-image: url("ny5.jpg");
     }40%{
-        background-image: url(ny6.jpeg);  
+        background-image: url("ny3.jpg");  
     }50%{
-        background-image: url(ny7.jpg);
+        background-image: url("ny7.jpg");
     }60%{
-        background-image: url(ny8.jpg);
+        background-image: url("ny8.jpg");
     }80%{
-        background-image: url(ny1.jpg);
+        background-image: url("ny6.jpg");
     }100%{
-        background-image: url(ny2.jpg);
+        background-image: url("ny9.jpg");
     }
 }

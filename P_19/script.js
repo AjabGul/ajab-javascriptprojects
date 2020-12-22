@@ -44,3 +44,20 @@ function newYear() {
 setInterval(() => {
     newYear();
 }, 1000)
+
+
+function loader(){
+
+    setTimeout(() => {
+
+        spinner.style.opacity = 0;
+        spinner.style.display = 'none';
+
+        mainContainer.style.display = 'block';
+
+    }, 4000)
+    
+
+}
+
+loader();

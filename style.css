@@ -109,7 +109,7 @@ body{
 }
 
 main{
-    background-image: url("main-background.jpeg");
+    background-image: url("main-background.jpg");
     background-repeat: no-repeat;
     background-size:cover;
     display: grid;

@@ -5,16 +5,16 @@ const listIndex = document.getElementById('listLi');
 
 const largestCountries = [
 
-    'Russia',
-    'Canada',
-    'United State',
-    'China',
-    'Brazil',
-    'Australia',
-    'India',
-    'Argentina',
-    'Kazakhistan',
-    'Algeria'
+    "Russia", 
+    "Canada",
+    "United State", 
+    "China", 
+    "Brazil", 
+    "Australia", 
+    "India", 
+    "Argentina", 
+    "Kazakhistan", 
+    "Algeria"
 ]
 
 
@@ -46,7 +46,7 @@ countryList.forEach(addToListTtem);
 function addToListTtem(country, index) {
 
     dragbox.innerHTML += `
-    <li draggable="true" id="listLi"> <span class="spn">${index + 1}</span> ${country} <br/> <i class="fas fa-grip-lines"></i></li>
+    <li draggable="true" id="listLi"> ${index + 1} <span class="spn">${country}</span>  <br/> <i class="fas fa-grip-lines"></i></li>
   `;
 
 }
@@ -134,16 +134,33 @@ window.addEventListener('load', function () {
 
 let sortedCountryList = [];
 
-// EventListener
-window.addEventListener('load', function() {
-    var count = document.querySelectorAll('.sortlist li');
-    for(let k of count){
-        sortedCountryList.push(count[k]);
-    }
-});
 
+// EventListener
 
 checkBtn.addEventListener('click', () => {
-    const orderedList = sortedCountryList
-    console.log(orderedList);
+    var solist = document.getElementsByTagName('li');
+
+    var content = [
+        solist[0].childNodes[1].innerText,
+        solist[1].childNodes[1].innerText,
+        solist[2].childNodes[1].innerText,
+        solist[3].childNodes[1].innerText,
+        solist[4].childNodes[1].innerText,
+        solist[5].childNodes[1].innerText,
+        solist[6].childNodes[1].innerText,
+        solist[7].childNodes[1].innerText,
+        solist[8].childNodes[1].innerText,
+        solist[9].childNodes[1].innerText,
+        
+    ];
+
+    if ( content === largestCountries ){
+        dragbox.classList.add("right");
+    }else{
+        dragbox.classList.add("wrong");
+    }
+
+    // console.log(content);
+    // console.log(largestCountries);
 });
+

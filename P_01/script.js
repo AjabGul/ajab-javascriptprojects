@@ -1,25 +1,23 @@
-const form = document.getElementById('form');
-const username = document.getElementById('username');
-const email = document.getElementById('email');
-const password = document.getElementById('password');
-const password2 = document.getElementById('password2');
+const form = document.getElementById("form");
+const userName = document.getElementById("userName");
+const userEmail = document.getElementById("userEmail");
+const userPassword = document.getElementById("userPassword");
+const confirmPassword= document.getElementById("confirmPassword");
 
-// All function
-// function to show error
+// Functions 
+// step 2: function for show error 
 
 function showError(input, message){
-
     const formControl = input.parentElement;
-    formControl.className = "form_control error";
+    formControl.className ="form_control error";
     const small = formControl.querySelector("small");
-    small.innerText = message;
-
-
+    small.innerText = message
 }
 
-// function for success
+// step 3: function for showsuccess 
 
 function showSuccess(input){
+    
     const formControl = input.parentElement;
     formControl.className = "form_control success"
 }
@@ -42,6 +40,9 @@ function checkPasswordMatch(input1, input2){
         showError(input2, "Password don't match")
     }
 }
+
+
+
 // function to check the required field
 
 function checkRequired(inputArray) {
@@ -53,6 +54,7 @@ function checkRequired(inputArray) {
         }
     });
 }
+
 
 // Function to get id input feiled first letter in capital
 
@@ -72,15 +74,54 @@ function checklength(input, min, max){
     }
 }
 
-// event listener for the form on submit
+// step 1: 
+// Event Listener 
 
 form.addEventListener("submit", function(e){
     e.preventDefault();
 
-    checkRequired([username, email, password, password2]);
-    checklength(username, 3, 20);
-    checklength(password, 6, 20);
-    checkEmail(email);
-    checkPasswordMatch(password, password2);
+    checkRequired([userName, userEmail, userPassword, confirmPassword]);
+    checklength(userName, 3, 20);
+    checklength(userPassword, 6, 20);
+    checkEmail(userEmail);
+    checkPasswordMatch(userPassword, confirmPassword);
 
 })
+
+
+
+// Event Listener 
+// step 1: 
+
+// form.addEventListener("submit", e=>{
+//     e.preventDefault();
+//     // user Name
+//     if(userName.value === ''){
+//         showError(userName, "User Name is required");
+//     }else{
+//         showSuccess(userName);
+//     }
+
+//     // Email 
+//     if(userEmail.value === ''){
+//         showError(userEmail, "User Email is required");
+//     }else{
+//         showSuccess(userEmail);
+//     }
+
+//     // password 
+
+//     if(userPassword.value === ''){
+//         showError(userPassword, "User Password is required");
+//     }else{
+//         showSuccess(userPassword);
+//     }
+
+//     // confirmPassword 
+
+//     if(confirmPassword.value === ''){
+//         showError(confirmPassword, "Confirm Your Password");
+//     }else{
+//         showSuccess(confirmPassword);
+//     }
+// });

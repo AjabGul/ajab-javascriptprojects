@@ -4,7 +4,7 @@ function newYear() {
     const today = new Date();
 
 
-    const cmgYear = new Date("January 1,2021 00:00:00");
+    const cmgYear = new Date("January 1,2022 00:00:00");
 
 
     const now = today.getTime();

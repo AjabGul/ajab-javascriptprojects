@@ -1,0 +1,25 @@
+.btn button{
+    width: 100%;
+    padding: 15px 20px;
+    background-color: blueviolet;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}
+
+.btn button a{
+
+    text-decoration: none;
+    color: white;
+
+}
+
+
+.prim h4{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.para{
+    padding-top: 50px;
+}

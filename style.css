@@ -101,6 +101,22 @@ body {
   margin-top: 20%;
 }
 
+.skills {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 50px;
+  background-color: rgb(104, 62, 62);
+  padding: 50px 50px;
+  width: 100%;
+  height: 100vh;
+  color: white;
+  font-size: 20px;
+}
+
+.skills .para {
+  text-align: justify;
+}
+
 main {
   background-image: url("main-background.jpg");
   background-repeat: no-repeat;

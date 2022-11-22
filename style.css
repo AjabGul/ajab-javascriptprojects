@@ -232,3 +232,48 @@ main {
     padding-left: 10%;
   }
 }
+
+.row {
+  background-color: rgb(85, 57, 88);
+  color: white;
+  height: 100vh;
+}
+
+.column {
+  float: left;
+  width: 33%;
+  margin-top: 80px;
+}
+
+.column a {
+  color: white;
+}
+
+.column ul li {
+  margin-top: 10px;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  
+}
+
+.columnContact {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.rowContact:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.columnContact p {
+color: blue;
+text-align: justify;
+margin-left: 50px;
+}
